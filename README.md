@@ -1,9 +1,11 @@
-# Beri Privacy Policy
+# Beri App Store Pages
 
-This repository hosts the public privacy policy for the Beri iOS app.
+This repository hosts public App Store support pages for the Beri iOS app.
 
-GitHub Pages URL:
+GitHub Pages URLs:
 
 `https://wei-nan.github.io/beri-privacy/privacy-policy.html`
 
-Use this URL in App Store Connect as the Privacy Policy URL after GitHub Pages is enabled for this repository.
+`https://wei-nan.github.io/beri-privacy/support.html`
+
+Use these URLs in App Store Connect after GitHub Pages is enabled for this repository.
