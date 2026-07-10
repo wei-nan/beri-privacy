@@ -116,7 +116,7 @@
       <h1>備理 Beri 隱私權政策</h1>
       <p class="meta">生效日期：2026-07-10<br>App：備理 Beri（iOS）</p>
       <p class="summary">
-        備理是一款家庭備品庫存與採購管理 App。備理不投放第三方廣告、不使用第三方追蹤 SDK，也不出售使用者資料。你的庫存、空間、採購與清點資料主要儲存在裝置本機與你的個人 iCloud。發票/收據 OCR 在裝置本機處理；條碼查詢會優先使用內建詞庫與本機快取，必要時才使用條碼向 Open Food Facts 查詢商品資訊。
+        備理是一款家庭備品庫存與採購管理 App。備理不投放第三方廣告、不使用第三方追蹤 SDK，也不出售使用者資料。你的庫存、空間、採購與清點資料主要儲存在裝置本機與你的個人 iCloud。目前版本不提供發票/收據 OCR 或外部條碼商品查詢；拍照快速建檔只會將你選擇的照片存成待確認品項，後續由你自行補上品名、容量、價格或其他細節。
       </p>
     </header>
 
@@ -131,9 +131,9 @@
       <ul>
         <li>庫存資料：品項名稱、品牌、條碼、分類、數量、單位、效期、低庫存門檻、消耗紀錄與清點紀錄。</li>
         <li>空間資料：收納空間名稱、空間內品項、數量、NFC 標籤綁定資訊。</li>
-        <li>採購資料：購物清單、購買日期、店名、發票號碼、價格、數量、單位成本與購買紀錄。</li>
+        <li>採購資料：購物清單、購買日期、店名、價格、數量、單位成本與購買紀錄。</li>
         <li>家庭與協作資料：你在 App 內建立的家庭、成員名稱、角色、共享範圍與共享邀請狀態。</li>
-        <li>照片與 OCR 資料：你拍攝或從相簿匯入的發票/收據照片，以及在裝置本機解析出的文字與品項資料。</li>
+        <li>照片資料：你拍攝或從相簿選取的品項照片。照片可用來建立待確認品項或補充既有品項圖片。</li>
         <li>設定資料：通知時間、外觀設定、教學與引導狀態、旅行模式等偏好設定。</li>
         <li>回饋資料：如果你主動透過 App 內意見回饋寄信，信件內容可能包含你填寫的摘要、回饋內容、聯絡方式，以及你選擇附上的診斷資訊。</li>
       </ul>
@@ -147,7 +147,7 @@
         <li>依空間顯示物品位置與數量。</li>
         <li>計算低庫存、效期、濾芯壽命與清點提醒。</li>
         <li>建立購物清單與採購紀錄。</li>
-        <li>使用條碼、照片、OCR 與語音輸入協助快速建檔。</li>
+        <li>使用照片與語音輸入協助快速建檔。</li>
         <li>透過 iCloud/CloudKit 在你的 Apple 裝置間同步資料。</li>
         <li>在你主動寄送回饋時，協助回覆問題或診斷錯誤。</li>
       </ul>
@@ -156,8 +156,8 @@
     <section class="section" aria-labelledby="permissions">
       <h2 id="permissions">4. 系統權限使用說明</h2>
       <ul>
-        <li>相機：用於掃描商品條碼，以及拍攝發票或收據。</li>
-        <li>相簿：用於選取發票或收據照片。</li>
+        <li>相機：用於拍攝品項照片，協助建立待確認的家庭備品紀錄。</li>
+        <li>相簿：用於選取品項照片，協助建立或補充家庭備品紀錄。</li>
         <li>麥克風與語音辨識：用於將語音轉換成品項名稱或輸入文字。</li>
         <li>通知：用於每日庫存摘要、低庫存、效期、濾芯與清點提醒。</li>
         <li>NFC：用於感應你綁定的收納空間標籤，快速打開對應空間。</li>
@@ -171,16 +171,16 @@
       <h3>Apple iCloud / CloudKit</h3>
       <p>備理使用 Apple CloudKit 將資料同步到你的個人 iCloud 帳戶。這些資料由 Apple 的 iCloud 服務處理，備理開發者不會經營獨立伺服器來收集或讀取你的完整庫存資料。</p>
 
-      <h3>Open Food Facts</h3>
-      <p>條碼查詢會優先使用 App 內建商品詞庫與本機快取。若本機查不到商品，備理可能會使用該條碼向 Open Food Facts 查詢商品名稱、品牌、包裝規格與商品圖片網址。此查詢不會傳送你的姓名、聯絡資訊、家庭成員、庫存數量、購買金額、發票照片或完整購買紀錄。</p>
+      <h3>外部商品查詢</h3>
+      <p>目前版本不提供外部條碼商品查詢，也不會因為建立品項而將條碼、品名、庫存數量、購買金額、照片或完整購買紀錄送往外部商品資料庫。App 內可能使用隨 App 一起打包的本機商品詞庫來提供輸入建議；這類本機建議不會產生網路傳輸。</p>
 
       <h3>不使用追蹤、廣告或第三方分析 SDK</h3>
       <p>目前版本的備理不使用第三方廣告網路、不使用第三方行為追蹤 SDK，也不出售使用者資料。若未來加入分析、錯誤回報、廣告或其他第三方 SDK，將更新本政策並依 Apple 規範與適用法律取得必要同意。</p>
     </section>
 
     <section class="section" aria-labelledby="local-processing">
-      <h2 id="local-processing">6. 發票/收據 OCR 與照片處理</h2>
-      <p>備理使用 Apple Vision 框架在你的裝置本機進行發票/收據文字辨識。發票或收據照片不會被上傳到備理開發者伺服器，也不會被送往第三方 OCR 服務。你確認匯入後，相關品項、金額與購買紀錄會儲存在 App 資料中，並可能依你的 iCloud 設定同步到個人 iCloud。</p>
+      <h2 id="local-processing">6. 照片處理</h2>
+      <p>目前版本不提供發票/收據 OCR，也不會將照片送往第三方 OCR 服務。拍照快速建檔只會把你選擇的照片存成待確認品項；你可以稍後自行補上品名、容量、價格或其他細節。你確認保存後，相關照片與品項資料會儲存在 App 資料中，並可能依你的 iCloud 設定同步到個人 iCloud。</p>
     </section>
 
     <section class="section" aria-labelledby="retention">
@@ -195,7 +195,7 @@
         <li>你可以在 App 內新增、修改或刪除庫存、空間、採購與清點資料。</li>
         <li>你可以在 iOS 設定中撤回相機、相簿、麥克風、語音辨識、通知或 NFC 相關權限。</li>
         <li>你可以在 iCloud 設定中管理 App 的 iCloud 資料。</li>
-        <li>你可以不使用條碼掃描、發票/收據 OCR、語音輸入、NFC 或 iCloud 同步，改以手動輸入方式使用備理。</li>
+        <li>你可以不使用拍照、語音輸入、NFC 或 iCloud 同步，改以手動輸入方式使用備理。</li>
       </ul>
     </section>
 
@@ -223,7 +223,7 @@
     <section class="section" aria-labelledby="english-summary">
       <h2 id="english-summary">English Summary for App Review</h2>
       <p>Beri is a household inventory and shopping management app. The app does not use third-party advertising SDKs, third-party tracking SDKs, or sell user data. Inventory, storage space, shopping, purchase, audit, and settings data are primarily stored on the user's device and may sync through the user's private iCloud/CloudKit account.</p>
-      <p>Receipt OCR is processed on device using Apple Vision. Receipt images are not uploaded to a developer-operated OCR server. Barcode lookup first uses bundled data and local cache; if a barcode is not found locally, the app may query Open Food Facts with the barcode to retrieve product name, brand, package information, and image URL. The app does not send the user's name, contact information, household members, inventory quantity, purchase amount, receipt images, or full purchase history to Open Food Facts.</p>
+      <p>The current version does not provide receipt OCR or external barcode product lookup. Photo-based quick entry only stores the selected item photo as a pending item so the user can fill in the name, package size, price, or other details later. The app may use a bundled local product dictionary for typing suggestions; these local suggestions do not transmit data to an external product database.</p>
       <p>For privacy questions or deletion requests, contact <a href="mailto:wilian0104@gmail.com">wilian0104@gmail.com</a>.</p>
     </section>
 
