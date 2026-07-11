@@ -3,115 +3,246 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>備理 Beri 支援</title>
-  <style>
-    :root {
-      color-scheme: light;
-      --bg: #f7f4ef;
-      --card: #fffaf3;
-      --ink: #2d2620;
-      --muted: #6f6258;
-      --line: #e4d8ca;
-      --accent: #8a5a2b;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.7;
-    }
-
-    main {
-      box-sizing: border-box;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 40px 20px 56px;
-    }
-
-    header,
-    section {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 24px;
-      margin-bottom: 18px;
-    }
-
-    h1,
-    h2 {
-      margin: 0 0 12px;
-      line-height: 1.25;
-    }
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    h2 {
-      font-size: 1.25rem;
-    }
-
-    p {
-      margin: 0 0 12px;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 1.3rem;
-    }
-
-    a {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .meta {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-  </style>
+  <title>備理 Beri - 支援中心與意見回饋</title>
+  <meta name="description" content="備理 Beri 支援中心。提供常見問題解答（FAQ）與使用者回饋提交表單。歡迎與我們聯絡以回報問題或提供建議。">
+  <link rel="icon" type="image/png" href="appicon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <header>
-      <h1>備理 Beri 支援</h1>
-      <p>備理是一款家庭備品庫存與採購管理 App。若你在使用上遇到問題，請透過電子郵件聯絡我們。</p>
-      <p class="meta">Support for Beri iOS app</p>
-    </header>
 
-    <section>
-      <h2>聯絡方式</h2>
-      <p>請來信：<a href="mailto:wilian0104@gmail.com">wilian0104@gmail.com</a></p>
-      <p>我們會依照問題內容回覆，協助確認 App 使用、iCloud 同步、權限設定或資料處理相關問題。</p>
-    </section>
+  <!-- Navigation Header -->
+  <header class="nav-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-group">
+        <img src="appicon.png" alt="Beri Logo" class="logo-img">
+        <span class="logo-text">備理 Beri</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">首頁</a>
+        <a href="support.html" class="active">支援中心</a>
+        <a href="privacy-policy.html">隱私權政策</a>
+      </nav>
+    </div>
+  </header>
 
-    <section>
-      <h2>來信時建議提供</h2>
-      <ul>
-        <li>你的 iPhone 或 iPad 型號</li>
-        <li>iOS 或 iPadOS 版本</li>
-        <li>備理 App 版本</li>
-        <li>遇到的問題描述</li>
-        <li>可重現問題的操作步驟，或可協助說明的截圖</li>
-      </ul>
-    </section>
+  <main class="container" style="padding-top: 40px; padding-bottom: 80px;">
+    <!-- Intro Card -->
+    <div class="card" style="text-align: center; padding: 40px 24px;">
+      <h1 style="margin: 0 0 12px; font-size: 2rem;">備理 Beri 支援中心</h1>
+      <p style="margin: 0; color: var(--muted); max-width: 600px; margin: 0 auto;">
+        若你在使用「備理」iOS App 的過程中遇到任何操作問題，或有任何新功能點子，歡迎在此提交回饋。我們將依據你提供的話題或建議進行功能改進。
+      </p>
+    </div>
 
-    <section>
-      <h2>常見支援項目</h2>
-      <ul>
-        <li>庫存、空間、採購清單與清點功能使用問題</li>
-        <li>iCloud / CloudKit 同步問題</li>
-        <li>相機、相簿、通知、NFC 等系統權限設定</li>
-        <li>資料刪除、隱私權政策或 App Store 審核相關問題</li>
-      </ul>
-    </section>
+    <!-- Main Grid: Left FAQ, Right Form -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; margin-top: 24px;">
+      
+      <!-- FAQ Section -->
+      <section>
+        <h2 style="margin: 0 0 24px; font-size: 1.4rem; font-weight: 700; border-bottom: 2px solid var(--accent-light); padding-bottom: 8px;">
+          常見問題 FAQ
+        </h2>
+        <div class="faq-list">
+          <!-- Q1 -->
+          <div class="faq-card">
+            <h3>Q. 需要註冊帳號嗎？</h3>
+            <p>目前不需要。我們堅持「開箱即用」原則，無須註冊、登入或連結任何帳號，下載後即可使用本機管理功能。</p>
+          </div>
 
-    <section>
-      <h2>相關連結</h2>
-      <p><a href="privacy-policy.html">備理 Beri 隱私權政策</a></p>
-    </section>
+          <!-- Q2 -->
+          <div class="faq-card">
+            <h3>Q. 我的資料會被上傳到哪裡？</h3>
+            <p>備理採用本地優先（Local-first）架構。你的庫存、空間、照片與採購紀錄主要儲存在你的裝置本機；若你開啟 iCloud，資料會透過 Apple 提供的 CloudKit 服務同步到你個人的私有雲中，開發者無法取得、亦不收集你的任何私隱資料。</p>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-card">
+            <h3>Q. 如何與家人共享備品清單？</h3>
+            <p>在 iOS 裝置上，你可以在 App 內透過系統的「共享中心」發送清單邀請連結。當家人接受邀請後，即可在各自的 Apple 裝置上共同清點與編輯。未來我們也規劃支援 Android 裝置，使跨平台的多人協作更加便利。</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; font-size: 0.9rem; color: var(--muted); text-align: center; border: 1px dashed var(--border); padding: 16px; border-radius: var(--radius);">
+          若 FAQ 無法解答你的疑惑，你可以直接透過下方表單或來信聯絡我們：<br>
+          <a href="mailto:beri.support@gmail.com" style="color: var(--accent); font-weight: 600;">beri.support@gmail.com</a>
+        </div>
+      </section>
+
+      <!-- Feedback Form Section -->
+      <section>
+        <h2 style="margin: 0 0 24px; font-size: 1.4rem; font-weight: 700; border-bottom: 2px solid var(--accent-light); padding-bottom: 8px;">
+          意見回饋與問題回報
+        </h2>
+
+        <!-- Success Message Card (Hidden initially) -->
+        <div id="successCard" class="status-card success">
+          <h3>
+            <svg viewBox="0 0 24 24" width="24" height="24" style="display: inline-block; vertical-align: -4px; margin-right: 6px; stroke: currentColor; stroke-width: 2.2; fill: none;">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            提交成功！
+          </h3>
+          <p>非常感謝你的回饋與建議。開發團隊已收到你的訊息，若有需要進一步釐清細節，我們將透過你留下的 Email 與你聯繫。</p>
+          <button onclick="resetForm()" class="btn" style="margin-top: 20px; padding: 8px 20px; font-size: 0.9rem;">填寫新表單</button>
+        </div>
+
+        <!-- Feedback Form -->
+        <form id="feedbackForm" class="card" onsubmit="submitFeedback(event)">
+          <!-- Feedback Type -->
+          <div class="form-group">
+            <label for="feedbackType">回饋類型 <span>*</span></label>
+            <select id="feedbackType" class="form-control" required>
+              <option value="問題回報">問題回報（Bug Report）</option>
+              <option value="功能建議" selected>功能建議（Feature Request）</option>
+              <option value="使用疑問">使用疑問（Usage Question）</option>
+              <option value="其他">其他（Others）</option>
+            </select>
+          </div>
+
+          <!-- Name -->
+          <div class="form-group">
+            <label for="userName">你的姓名/暱稱</label>
+            <input type="text" id="userName" class="form-control" placeholder="例如：林小姐">
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="userEmail">聯絡信箱</label>
+            <input type="email" id="userEmail" class="form-control" placeholder="email@example.com">
+            <p class="form-hint">若希望收到我們對問題的回覆，建議填寫此欄位</p>
+          </div>
+
+          <!-- Subject -->
+          <div class="form-group">
+            <label for="formSubject">主旨 <span>*</span></label>
+            <input type="text" id="formSubject" class="form-control" placeholder="簡述你要回報的問題或想法" required>
+          </div>
+
+          <!-- Description -->
+          <div class="form-group">
+            <label for="formDesc">詳細說明 <span>*</span></label>
+            <textarea id="formDesc" class="form-control" placeholder="請詳細描述遇到的操作流程、異常結果，或你想建議的新功能細節" required></textarea>
+          </div>
+
+          <!-- Diagnostic Inputs -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label for="appVersion">備理 App 版本</label>
+              <input type="text" id="appVersion" class="form-control" placeholder="例如：1.0.0">
+            </div>
+            <div class="form-group">
+              <label for="iosVersion">裝置系統版本</label>
+              <input type="text" id="iosVersion" class="form-control" placeholder="例如：iOS 18.0">
+            </div>
+          </div>
+
+          <!-- Agreement Checkbox -->
+          <div class="checkbox-group">
+            <input type="checkbox" id="agreePrivacy" required>
+            <label for="agreePrivacy">
+              我已確認所填資訊<strong>不包含密碼、信用卡或家庭備品隱私等敏感數據</strong>。我同意將此表單內容傳送給備理團隊，用以協助改進產品。<span>*</span>
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="submitBtn" class="btn" style="width: 100%;">提交回饋</button>
+          
+          <div id="errorAlert" style="display: none; color: var(--danger); font-size: 0.9rem; font-weight: 600; text-align: center; margin-top: 16px;">
+            提交失敗，請檢查網路連線，或直接來信至 beri.support@gmail.com。
+          </div>
+        </form>
+      </section>
+
+    </div>
   </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 備理 Beri. All rights reserved.</p>
+      <a href="index.html">首頁</a>
+      <a href="support.html">支援中心</a>
+      <a href="privacy-policy.html">隱私權政策</a>
+    </div>
+  </footer>
+
+  <script>
+    // 💡 部署好 Google Apps Script Web App 後，請將下方 URL 替換為你的 Web App URL
+    // 部署步驟參見：https://wilia0104.github.io/beri-privacy/ (或查看部署說明檔案)
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbwF8XH4aSB9uinskiCodeBHHi4W30INZnGUYrP0vMtaMJpJYq26VwXmVJDaPdSaxRkU/exec'; // 預設保留 placeholder，或由您替換
+
+    function submitFeedback(event) {
+      event.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      const errorAlert = document.getElementById('errorAlert');
+      const form = document.getElementById('feedbackForm');
+      const successCard = document.getElementById('successCard');
+      
+      // 禁用按鈕與隱藏舊錯誤
+      submitBtn.disabled = true;
+      submitBtn.innerText = '傳送中...';
+      errorAlert.style.display = 'none';
+
+      // 整理資料
+      const payload = {
+        type: document.getElementById('feedbackType').value,
+        name: document.getElementById('userName').value,
+        email: document.getElementById('userEmail').value,
+        subject: document.getElementById('formSubject').value,
+        description: document.getElementById('formDesc').value,
+        appVersion: document.getElementById('appVersion').value,
+        iosVersion: document.getElementById('iosVersion').value
+      };
+
+      // 1. 若 scriptUrl 未設定或仍為 placeholder，模擬提交（供本地測試）
+      if (!scriptUrl || scriptUrl.includes('YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') || scriptUrl.includes('PLACEHOLDER')) {
+        console.log('[Dev mode] 表單發送模擬:', payload);
+        setTimeout(() => {
+          form.style.display = 'none';
+          successCard.style.display = 'block';
+          submitBtn.disabled = false;
+          submitBtn.innerText = '提交回饋';
+        }, 1000);
+        return;
+      }
+
+      // 2. 正式發送資料至 Google Sheet API
+      fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors', // 使用 no-cors 模式以配合 Google Apps Script Web App 的導向限制
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(() => {
+        // no-cors 下無法讀取 body，但若未拋出錯誤即視為成功
+        form.style.display = 'none';
+        successCard.style.display = 'block';
+      })
+      .catch((error) => {
+        console.error('表單送出錯誤:', error);
+        errorAlert.style.display = 'block';
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerText = '提交回饋';
+      });
+    }
+
+    function resetForm() {
+      const form = document.getElementById('feedbackForm');
+      const successCard = document.getElementById('successCard');
+      
+      // 重設表單輸入值
+      form.reset();
+      
+      // 切換顯示
+      successCard.style.display = 'none';
+      form.style.display = 'block';
+    }
+  </script>
 </body>
 </html>
