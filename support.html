@@ -73,13 +73,13 @@
           <!-- Q2 -->
           <div class="faq-card">
             <h3>Q. 我的資料會被上傳到哪裡？</h3>
-            <p>備理採用本地優先（Local-first）架構。你的庫存、空間、照片與採購紀錄主要儲存在你的裝置本機；若你開啟 iCloud，資料會透過 Apple 提供的 CloudKit 服務同步到你個人的私有雲中，開發者無法取得、亦不收集你的任何私隱資料。</p>
+            <p>備理採用本地優先（Local-first）架構。你的庫存、空間、照片與採購紀錄主要儲存在裝置本機；若開啟 iCloud，資料會透過 Apple CloudKit 同步到你的個人 iCloud。開發者不另建伺服器保存你的庫存資料；只有在你主動提交回饋時，才會收到你選擇提供的聯絡與問題資訊。</p>
           </div>
 
           <!-- Q3 -->
           <div class="faq-card">
-            <h3>Q. 如何與家人共享備品清單？</h3>
-            <p>在 iOS 裝置上，你可以在 App 內透過系統的「共享中心」發送清單邀請連結。當家人接受邀請後，即可在各自的 Apple 裝置上共同清點與編輯。未來我們也規劃支援 Android 裝置，使跨平台的多人協作更加便利。</p>
+            <h3>Q. 如何與家人共享？</h3>
+            <p>你可以選擇「邀請一起管理這個家」，讓家人共同管理同一個住所；也可以使用「只分享這個空間」或「請對方幫忙採購」，提供特定內容的可讀副本。可讀副本適合參考或採購，後續變更不保證自動同步。</p>
           </div>
         </div>
 
@@ -110,6 +110,9 @@
 
         <!-- Feedback Form -->
         <form id="feedbackForm" class="card" onsubmit="submitFeedback(event)">
+          <p class="form-privacy-note">
+            送出後，內容會透過 Google Apps Script 傳送給備理團隊，並寄送通知信。請勿填寫密碼、付款資料或庫存明細等敏感資訊。詳情請見<a href="privacy-policy.html#website-feedback">隱私權政策</a>。
+          </p>
           <!-- Feedback Type -->
           <div class="form-group">
             <label for="feedbackType">回饋類型 <span>*</span></label>
@@ -162,7 +165,7 @@
           <div class="checkbox-group">
             <input type="checkbox" id="agreePrivacy" required>
             <label for="agreePrivacy">
-              我已確認所填資訊<strong>不包含密碼、信用卡或家庭備品隱私等敏感數據</strong>。我同意將此表單內容傳送給備理團隊，用以協助改進產品。<span>*</span>
+              我已確認所填資訊<strong>不包含密碼、付款資料或家庭庫存明細等敏感資訊</strong>，並同意將表單內容傳送給備理團隊，用於回覆問題及改進產品。<span>*</span>
             </label>
           </div>
 

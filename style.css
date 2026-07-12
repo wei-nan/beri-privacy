@@ -46,6 +46,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* 佈局 */
@@ -155,6 +156,20 @@ main {
   color: var(--accent);
 }
 
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 13px;
+  margin-bottom: 20px;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+  border-radius: 999px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
 /* Hero Section */
 .hero {
   padding: 80px 0 60px;
@@ -176,6 +191,14 @@ main {
   max-width: 680px;
   margin: 0 auto 40px;
   line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 /* 按鈕 */
@@ -204,6 +227,31 @@ main {
 
 .btn:active {
   transform: translateY(1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent);
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  background: var(--accent-light);
+  color: var(--accent) !important;
+  box-shadow: none;
+}
+
+.btn-disabled {
+  cursor: default;
+  box-shadow: none;
+}
+
+.btn-disabled:hover,
+.btn-disabled:active {
+  background-color: var(--accent);
+  box-shadow: none;
+  transform: none;
 }
 
 /* 卡片與網格 */
@@ -404,6 +452,22 @@ textarea.form-control {
   margin-top: 6px;
 }
 
+.form-privacy-note {
+  margin: 0 0 24px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: var(--accent-light);
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.form-privacy-note a {
+  color: var(--accent);
+  font-weight: 600;
+  margin-left: 0.25em;
+}
+
 /* 狀態卡片 */
 .status-card {
   padding: 40px;
@@ -591,24 +655,137 @@ footer a:hover {
 }
 
 @media (max-width: 600px) {
-  .hero {
-    padding: 60px 0 40px;
+  .container,
+  .container-wide {
+    padding-left: 18px;
+    padding-right: 18px;
   }
-  .privacy-banner {
-    padding: 32px 20px;
+  .nav-header {
+    padding: 10px 0 0;
+  }
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .logo-img {
+    width: 34px;
+    height: 34px;
+  }
+  .logo-text {
+    font-size: 1.12rem;
+  }
+  .nav-links {
+    display: flex;
+    width: calc(100% + 36px);
+    margin: 0 -18px;
+    padding: 0 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
   .nav-links a {
-    margin-left: 16px;
+    flex: 0 0 auto;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0;
+    padding: 0 10px;
+    font-size: 0.88rem;
+  }
+  .hero {
+    padding: 44px 0 28px;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 10vw, 2.6rem);
+  }
+  .hero p {
+    margin-bottom: 28px;
+    font-size: 1.02rem;
+  }
+  .desktop-break {
+    display: none;
+  }
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    min-height: 48px;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 28px 0 56px;
+  }
+  .feature-card,
+  .card,
+  form.card {
+    padding: 22px;
+  }
+  .privacy-banner {
+    padding: 28px 20px;
+    margin: 28px 0 56px;
+  }
+  .privacy-banner h2 {
+    font-size: 1.45rem;
   }
   .preview-section {
-    padding: 60px 0;
+    padding: 48px 0;
+  }
+  .preview-section h2 {
+    font-size: 1.65rem;
+  }
+  .preview-section p.subtitle {
+    margin-bottom: 28px;
   }
   .mockup-container {
     gap: 8px;
     padding: 16px 12px;
   }
   .promo-card {
-    width: 120px;
+    width: min(58vw, 220px);
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+  .form-control {
+    min-height: 48px;
+    font-size: 16px;
+  }
+  textarea.form-control {
+    min-height: 140px;
+  }
+  .checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+  }
+  .status-card {
+    padding: 28px 20px;
+  }
+  footer {
+    padding: 36px 0;
+  }
+  footer a {
+    display: inline-block;
+    min-height: 44px;
+    padding: 10px 4px;
+    margin: 0 4px;
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
