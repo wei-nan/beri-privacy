@@ -716,6 +716,8 @@ footer a:hover {
 .dot {
   width: 8px;
   height: 8px;
+  padding: 0;
+  border: 0;
   border-radius: 50%;
   background-color: var(--border);
   cursor: pointer;
@@ -729,6 +731,7 @@ footer a:hover {
 
 /* 宣傳卡片樣式 */
 .promo-card {
+  padding: 0;
   background-color: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -738,6 +741,14 @@ footer a:hover {
   aspect-ratio: 1125 / 2436;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.promo-card:focus-visible,
+.dot:focus-visible,
+.lightbox-close:focus-visible,
+.lightbox-nav:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .promo-card img {
@@ -754,6 +765,96 @@ footer a:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(138, 90, 43, 0.15);
   border-color: var(--accent);
+}
+
+/* 截圖放大檢視 */
+.lightbox-open {
+  overflow: hidden;
+}
+
+.image-lightbox[hidden] {
+  display: none;
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 20, 18, 0.86);
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-dialog {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  width: min(100%, 1100px);
+  max-height: calc(100vh - 56px);
+}
+
+.lightbox-figure {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  margin: 0;
+  touch-action: pan-y;
+}
+
+.lightbox-figure img {
+  display: block;
+  max-width: min(100%, 460px);
+  max-height: calc(100vh - 120px);
+  border-radius: calc(var(--radius) + 4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-figure figcaption {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.lightbox-close,
+.lightbox-nav {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  transition: var(--transition);
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -8px;
+  right: 0;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.lightbox-nav {
+  margin: 18px;
+  font-size: 2.3rem;
+  line-height: 1;
 }
 
 
@@ -860,6 +961,26 @@ footer a:hover {
   }
   .promo-card {
     width: min(58vw, 220px);
+  }
+  .image-lightbox {
+    padding: 16px;
+  }
+  .lightbox-dialog {
+    display: block;
+    width: 100%;
+    max-height: calc(100vh - 32px);
+  }
+  .lightbox-figure img {
+    max-width: min(100%, 330px);
+    max-height: calc(100vh - 112px);
+  }
+  .lightbox-close {
+    top: -6px;
+    right: auto;
+    left: 0;
+  }
+  .lightbox-nav {
+    display: none;
   }
   .dot {
     width: 10px;

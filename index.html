@@ -148,51 +148,64 @@
     <section class="preview-section" id="preview">
       <div class="container">
         <h2>App 介面預覽</h2>
-        <p class="subtitle">專為 iPhone 打造的簡潔介面，陪你把家庭日常備妥</p>
+        <p class="subtitle">專為 iPhone 打造的簡潔介面，陪你把家庭日常備妥。點擊圖片即可放大檢視。</p>
       </div>
       
       <div class="container-wide">
         <div class="carousel-viewport">
           <div class="mockup-container">
           <div class="mockup-item">
-            <div class="promo-card">
+            <button class="promo-card" type="button" aria-label="放大檢視：日常備品，Beri 幫妳理">
               <img src="screenshots/promo_overview.webp" alt="日常備品，Beri 幫妳理">
-            </div>
+            </button>
           </div>
           <div class="mockup-item">
-            <div class="promo-card">
+            <button class="promo-card" type="button" aria-label="放大檢視：空間魔法，找東西一秒定位">
               <img src="screenshots/promo_spaces.webp" alt="空間魔法，找東西一秒定位">
-            </div>
+            </button>
           </div>
           <div class="mockup-item">
-            <div class="promo-card">
+            <button class="promo-card" type="button" aria-label="放大檢視：自動換算單位成本，聰明守護荷包">
               <img src="screenshots/promo_shopping.webp" alt="自動換算單位成本，聰明守護荷包">
-            </div>
+            </button>
           </div>
           <div class="mockup-item">
-            <div class="promo-card">
+            <button class="promo-card" type="button" aria-label="放大檢視：碰一下櫃子，立即查看庫存">
               <img src="screenshots/promo_nfc.webp" alt="碰一下櫃子，立即查看庫存">
-            </div>
+            </button>
           </div>
           <div class="mockup-item">
-            <div class="promo-card">
+            <button class="promo-card" type="button" aria-label="放大檢視：深、淺兩種模式，自由選擇">
               <img src="screenshots/promo_darkmode.webp" alt="深、淺兩種模式，自由選擇">
-            </div>
+            </button>
           </div>
           </div>
         </div>
 
         <!-- 輪播指示點 -->
         <div class="carousel-indicators">
-          <span class="dot active" onclick="scrollToIndex(0)"></span>
-          <span class="dot" onclick="scrollToIndex(1)"></span>
-          <span class="dot" onclick="scrollToIndex(2)"></span>
-          <span class="dot" onclick="scrollToIndex(3)"></span>
-          <span class="dot" onclick="scrollToIndex(4)"></span>
+          <button class="dot active" type="button" aria-label="顯示第 1 張預覽圖" onclick="scrollToIndex(0)"></button>
+          <button class="dot" type="button" aria-label="顯示第 2 張預覽圖" onclick="scrollToIndex(1)"></button>
+          <button class="dot" type="button" aria-label="顯示第 3 張預覽圖" onclick="scrollToIndex(2)"></button>
+          <button class="dot" type="button" aria-label="顯示第 4 張預覽圖" onclick="scrollToIndex(3)"></button>
+          <button class="dot" type="button" aria-label="顯示第 5 張預覽圖" onclick="scrollToIndex(4)"></button>
         </div>
       </div>
     </section>
   </main>
+
+  <div class="image-lightbox" id="imageLightbox" hidden role="dialog" aria-modal="true" aria-labelledby="lightboxCaption">
+    <div class="lightbox-backdrop" data-close-lightbox></div>
+    <div class="lightbox-dialog">
+      <button class="lightbox-close" type="button" aria-label="關閉放大檢視" data-close-lightbox>×</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="上一張預覽圖">‹</button>
+      <figure class="lightbox-figure">
+        <img id="lightboxImage" src="" alt="">
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="下一張預覽圖">›</button>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
@@ -210,11 +223,56 @@
     const track = document.querySelector('.mockup-container');
     const items = track ? Array.from(track.querySelectorAll('.mockup-item')) : [];
     const dots = document.querySelectorAll('.dot');
+    const lightbox = document.getElementById('imageLightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxFigure = document.querySelector('.lightbox-figure');
+    const closeLightboxButtons = document.querySelectorAll('[data-close-lightbox]');
+    const previousImageButton = document.querySelector('.lightbox-prev');
+    const nextImageButton = document.querySelector('.lightbox-next');
+    const closeLightboxButton = document.querySelector('.lightbox-close');
+    const previewCards = items.map((item) => item.querySelector('.promo-card'));
 
     // 目前聚焦的卡片索引（預設中間那張）
     let activeIndex = Math.floor(items.length / 2);
 
     const clamp = (i) => Math.max(0, Math.min(items.length - 1, i));
+    const wrap = (i) => (i + items.length) % items.length;
+    let lightboxIndex = 0;
+    let previouslyFocusedElement = null;
+    let lightboxSwipeStartX = 0;
+    let lightboxSwipeStartY = 0;
+
+    function updateLightbox() {
+      const image = items[lightboxIndex]?.querySelector('img');
+      if (!image) return;
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt;
+      lightboxCaption.textContent = image.alt;
+    }
+
+    function openLightbox(index) {
+      if (!lightbox || items.length === 0) return;
+      lightboxIndex = clamp(index);
+      previouslyFocusedElement = document.activeElement;
+      updateLightbox();
+      lightbox.hidden = false;
+      document.body.classList.add('lightbox-open');
+      closeLightboxButton?.focus();
+    }
+
+    function closeLightbox() {
+      if (!lightbox || lightbox.hidden) return;
+      lightbox.hidden = true;
+      document.body.classList.remove('lightbox-open');
+      previouslyFocusedElement?.focus?.();
+    }
+
+    function showLightboxImage(offset) {
+      if (!lightbox || lightbox.hidden || items.length === 0) return;
+      lightboxIndex = wrap(lightboxIndex + offset);
+      updateLightbox();
+    }
 
     // 計算讓指定卡片置中所需的位移量
     function offsetFor(index) {
@@ -236,6 +294,7 @@
       });
       dots.forEach((dot, i) => {
         dot.classList.toggle('active', i === activeIndex);
+        dot.setAttribute('aria-current', i === activeIndex ? 'true' : 'false');
       });
     }
 
@@ -286,11 +345,14 @@
           if (dx <= -threshold) activeIndex = clamp(activeIndex + 1);
           else if (dx >= threshold) activeIndex = clamp(activeIndex - 1);
         } else {
-          // 沒拖曳＝點擊：把按到的那張卡片設為中間
+          // 沒拖曳＝點擊：放大檢視按到的卡片
           const item = downTarget && downTarget.closest
             ? downTarget.closest('.mockup-item') : null;
           const idx = item ? items.indexOf(item) : -1;
-          if (idx !== -1) activeIndex = idx;
+          if (idx !== -1) {
+            activeIndex = idx;
+            openLightbox(idx);
+          }
         }
         render(true);
       }
@@ -298,6 +360,38 @@
       track.addEventListener('pointerup', endDrag);
       track.addEventListener('pointercancel', endDrag);
     }
+
+    previewCards.forEach((card, index) => {
+      card?.addEventListener('click', (event) => {
+        if (event.detail !== 0) return;
+        activeIndex = index;
+        render(true);
+        openLightbox(index);
+      });
+    });
+
+    closeLightboxButtons.forEach((button) => button.addEventListener('click', closeLightbox));
+    previousImageButton?.addEventListener('click', () => showLightboxImage(-1));
+    nextImageButton?.addEventListener('click', () => showLightboxImage(1));
+    lightboxFigure?.addEventListener('pointerdown', (event) => {
+      if (event.pointerType !== 'touch') return;
+      lightboxSwipeStartX = event.clientX;
+      lightboxSwipeStartY = event.clientY;
+      try { lightboxFigure.setPointerCapture(event.pointerId); } catch (_) {}
+    });
+    lightboxFigure?.addEventListener('pointerup', (event) => {
+      if (event.pointerType !== 'touch') return;
+      const deltaX = event.clientX - lightboxSwipeStartX;
+      const deltaY = event.clientY - lightboxSwipeStartY;
+      if (Math.abs(deltaX) < 48 || Math.abs(deltaX) <= Math.abs(deltaY)) return;
+      showLightboxImage(deltaX < 0 ? 1 : -1);
+    });
+    document.addEventListener('keydown', (event) => {
+      if (!lightbox || lightbox.hidden) return;
+      if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'ArrowLeft') showLightboxImage(-1);
+      if (event.key === 'ArrowRight') showLightboxImage(1);
+    });
   </script>
 </body>
 </html>
