@@ -175,9 +175,14 @@
       <h2 id="local-processing">6. 照片處理</h2>
       <p>拍照快速建檔會把你選擇的照片存成待確認品項；你可以稍後自行補上品名、容量、價格或其他細節。你確認保存後，相關照片與品項資料會儲存在 App 資料中；若你未登入帳號，可能依你的 iCloud 設定同步到個人 iCloud，若你已登入帳號則會同步到 Google 的雲端服務（見第 5 節）。</p>
 
-      <h2 id="retention">7. 資料保存與刪除</h2>
+      <h2 id="retention">7. 資料保存、匯出與刪除</h2>
       <p>若你未登入帳號：你建立的庫存相關資料會保留在裝置本機與你的個人 iCloud 中，直到你在 App 內刪除、刪除 App、清除 iCloud 中的 App 資料，或使用 Apple 提供的 iCloud 管理工具移除資料。此情況下備理不會在開發者伺服器另外保存一份庫存資料庫。</p>
-      <p>若你已登入帳號：你的庫存、家庭與帳號資料會保存在 Google 的雲端服務中，期間為帳號存續期間；你可依第 12 節聯絡方式申請刪除帳號，我們會在合理期間內從雲端刪除你的資料副本（實際刪除時限以我們回覆你的請求時所告知者為準）。若你退出共享家庭，你的個人帳號資料將自該家庭移除，但你在共享期間產生的庫存／採購紀錄可能依其他家庭成員之需要繼續保留於該家庭帳號中；若整個家庭被擁有者刪除，相關成員資料之處理方式將依當時之家庭刪除功能設計為準，你可來信查詢實際做法。</p>
+      <p>若你已登入帳號，你可以在 App 內「帳號與同步」畫面自助操作，不需要來信等待人工處理：</p>
+      <ul>
+        <li><strong>資料匯出：</strong>按下「匯出我的資料」會產生包含完整 JSON、採購紀錄 CSV 與既有品項照片的 ZIP 壓縮檔；下載連結約 15 分鐘後失效，逾期的匯出檔會由系統自動排程清除。</li>
+        <li><strong>帳號刪除：</strong>按下「刪除帳號」會立即進入 30 天緩衝期，期間帳號狀態為唯讀（無法新增或修改雲端資料、無法邀請或加入住所），你可以隨時在 App 內自助取消，帳號會立刻恢復正常。若你擁有共享住所，需先移轉擁有權給其他成員，或明確選擇一併永久刪除——選擇一併刪除的住所會立即刪除且無法復原，移轉後的住所則由新擁有者與其他成員繼續保留。30 天緩衝期屆滿後，系統會自動永久刪除你的 Firebase 帳號，以及與帳號連結的個人資料、其他住所中的成員身分、你送出的回饋與尚未過期的匯出檔。</li>
+      </ul>
+      <p>若你退出共享家庭，你的個人帳號資料將自該家庭移除，但你在共享期間產生的庫存／採購紀錄仍會留在該家庭帳號中供其他成員使用。</p>
       <p>家庭邀請連結相關的驗證資訊（由 Cloudflare 處理）會於邀請到期或撤銷後的合理期間內失效或清除。</p>
       <p>若你透過電子郵件或官網表單主動提供回饋，相關內容可能保存在備理團隊使用的收件信箱與 Google 服務中，用於通知、回覆及追蹤問題，直到不再需要處理該回饋或你提出合理的刪除要求。你可以來信要求刪除先前提供的回饋內容。</p>
 
@@ -187,7 +192,7 @@
         <li>你可以在 iOS 設定中撤回相機、相簿、麥克風、語音辨識、通知或 NFC 相關權限。</li>
         <li>你可以在 iCloud 設定中管理 App 的 iCloud 資料。</li>
         <li>你可以選擇以手動輸入方式使用備理，不登入帳號、不建立雲端帳號資料。</li>
-        <li>你可以隨時登出帳號；如需刪除雲端帳號與雲端資料，可依第 12 節聯絡方式提出請求。</li>
+        <li>你可以隨時登出帳號；你可以在 App 內「帳號與同步」畫面自助匯出資料，或自助申請刪除帳號並在 30 天緩衝期內隨時自行取消。</li>
         <li>你可以在家庭設定中管理成員角色、調整店名／價格對其他成員的可見度，或退出共享家庭。</li>
         <li>你可以不填寫官網回饋表單；若已提交，可以來信要求查詢或刪除你提供的回饋資訊。</li>
         <li>你可以拒絕網站分析與廣告成效 Cookie，或隨時使用頁尾的「Cookie 設定」撤回或修改選擇。</li>
@@ -210,6 +215,7 @@
       <p>Beri is a household inventory and shopping management app. If a user does not sign in, inventory, storage space, shopping, purchase, audit, photo, and settings data are primarily stored on the user's device and may sync through the user's private iCloud account.</p>
       <p>If a user signs in with Apple or Google, Beri creates an account through a cloud service provided by Google (technical name: Firebase) and syncs the data above to that cloud service (hosted in the Asia-East region) so the user can access data across devices and share a household with invited members. Sign-in collects the user's email address, display name, and an account identifier.</p>
       <p>Household sharing: when a user joins or creates a shared household, their name, email, and role (owner/admin/member) become visible to other members of that household. Depending on the household owner's settings, inventory, purchase history, store names, and prices may be visible or hidden to other members. Delegated-purchase reports (item, price, store, note) are shared with the household's admins. Household invite links are served jointly by Google's cloud service and Cloudflare (invite.beri-home.app); Cloudflare processes invite-link verification data to prevent invite-link abuse and is not designed to access inventory content.</p>
+      <p>Signed-in users can self-serve both data export and account deletion in the app's Account settings screen, without emailing support. Export generates a ZIP (full JSON, purchase-history CSV, and existing item photos) via a download link that expires in about 15 minutes. Requesting account deletion starts a 30-day cancellation period during which the account is read-only; the user can cancel anytime in the app during that window. Owned households must be transferred to another member or explicitly selected for immediate, unrecoverable deletion. After 30 days, the system automatically and permanently deletes the Firebase account along with linked profile data, membership records in other households, submitted feedback, and any unexpired exports.</p>
       <p>Photo-based quick entry stores the selected item photo as a pending item so the user can fill in the name, package size, price, or other details later. The app may use a bundled local product dictionary for typing suggestions on the device.</p>
       <p>If a user voluntarily submits the website feedback form, the provided feedback and optional contact or diagnostic details are transmitted through Google Apps Script to notify the Beri team. The website form does not access the user's inventory, photos, or iCloud data.</p>
       <p>The website loads Google Analytics or Meta Pixel only after the user selects the corresponding analytics or advertising consent. Meta Pixel is limited to website page views and App Store outbound clicks; feedback form fields and in-app household data are not sent to these tools.</p>
