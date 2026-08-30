@@ -635,6 +635,172 @@ footer a:hover {
   color: var(--accent);
 }
 
+.footer-cookie-button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  margin: 0 12px;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.footer-cookie-button:hover {
+  color: var(--accent);
+}
+
+/* Cookie 與追蹤同意 */
+.cookie-banner {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1200;
+  margin: 0 auto;
+  max-width: 960px;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 4px);
+  background: color-mix(in srgb, var(--card-bg) 96%, transparent);
+  box-shadow: 0 18px 60px rgba(45, 38, 32, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-banner__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 22px;
+}
+
+.cookie-banner h2,
+.cookie-dialog h2 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.cookie-banner p,
+.cookie-dialog p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.cookie-banner p a {
+  color: var(--accent);
+}
+
+.cookie-banner__actions,
+.cookie-dialog__actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+}
+
+.cookie-button {
+  min-height: 44px;
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: 650;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.cookie-button:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.cookie-button--secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.cookie-button--secondary:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.cookie-dialog {
+  width: min(92vw, 620px);
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 4px);
+  background: var(--card-bg);
+  color: var(--text);
+  box-shadow: 0 24px 80px rgba(22, 20, 18, 0.32);
+}
+
+.cookie-dialog::backdrop {
+  background: rgba(22, 20, 18, 0.62);
+  backdrop-filter: blur(5px);
+}
+
+.cookie-dialog form {
+  padding: 24px;
+}
+
+.cookie-dialog__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.cookie-dialog__close {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.cookie-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+}
+
+.cookie-option strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.cookie-option input {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--accent);
+}
+
+.cookie-dialog__actions {
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
 /* 預覽區塊 */
 .preview-section {
   text-align: center;
@@ -1009,6 +1175,36 @@ footer a:hover {
     min-height: 44px;
     padding: 10px 4px;
     margin: 0 4px;
+  }
+  .footer-cookie-button {
+    display: inline-block;
+    min-height: 44px;
+    padding: 10px 4px;
+    margin: 0 4px;
+  }
+  .cookie-banner {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+  }
+  .cookie-banner__content {
+    display: block;
+    padding: 18px;
+  }
+  .cookie-banner__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 16px;
+  }
+  .cookie-banner__actions .cookie-button:last-child {
+    grid-column: 1 / -1;
+  }
+  .cookie-dialog form {
+    padding: 20px;
+  }
+  .cookie-dialog__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 

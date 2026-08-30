@@ -1,13 +1,6 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KB2TTM3G');</script>
-  <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>備理 Beri - 隱私權政策</title>
@@ -35,6 +28,8 @@
 
   <link rel="icon" type="image/png" href="appicon.png">
   <link rel="stylesheet" href="style.css">
+  <script src="tracking-config.js"></script>
+  <script src="tracking-consent.js"></script>
   <style>
     /* 專為隱私權政策長文設計的微調樣式 */
     .privacy-content h2 {
@@ -71,11 +66,6 @@
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB2TTM3G"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
   <!-- Navigation Header -->
   <header class="nav-header">
     <div class="container nav-container">
@@ -96,12 +86,12 @@
     <div class="card privacy-content">
       <h1 style="margin: 0 0 16px; font-size: 2.2rem; line-height: 1.25;">備理 Beri 隱私權政策</h1>
       <p style="color: var(--muted); font-size: 0.95rem; margin-bottom: 24px;">
-        生效日期：2026-07-12<br>
+        生效日期：2026-08-30<br>
         適用服務：備理 Beri（iOS）與 beri-home.app 網站
       </p>
       
       <div class="summary-box">
-        備理是一款家庭備品庫存與採購管理 App。你的庫存、空間、採購、照片與清點資料主要儲存在裝置本機，並可依你的 iCloud 設定同步到個人 iCloud。只有在你主動使用 App 內寄信或官網回饋表單時，備理團隊才會收到你選擇提供的聯絡與問題資訊。
+        備理是一款家庭備品庫存與採購管理 App。若你不登入帳號，你的庫存、空間、採購、照片與清點資料主要儲存在裝置本機，並可依你的 iCloud 設定同步到個人 iCloud。若你選擇以 Apple 或 Google 帳號登入，App 會改為透過 Google 提供的雲端服務建立帳號並同步上述資料，讓你能與家庭成員共享庫存、也能跨裝置使用；家庭邀請連結另由 Cloudflare 提供服務。官網只會在你選擇同意後啟用網站分析或廣告成效追蹤；回饋內容則只會在你主動送出表單時傳送給備理團隊。
       </div>
 
       <h2 id="scope">1. 本政策適用範圍</h2>
@@ -110,13 +100,15 @@
       <h2 id="data">2. 備理處理的資料</h2>
       <p>備理可能處理以下由你主動建立或授權存取的資料：</p>
       <ul>
+        <li>帳號資料：若你選擇以 Apple 或 Google 帳號登入，我們會取得你的電子郵件地址、顯示名稱與一組帳號識別碼。若你不登入，備理不會建立帳號或蒐集這些資料。</li>
         <li>庫存資料：品項名稱、品牌、條碼、分類、數量、單位、效期、低庫存門檻、消耗紀錄與清點紀錄。</li>
         <li>空間資料：收納空間名稱、空間內品項、數量、NFC 標籤綁定資訊。</li>
         <li>採購資料：購物清單、購買日期、店名、價格、數量、單位成本與購買紀錄。</li>
-        <li>家庭與協作資料：你在 App 內建立的家庭、成員名稱、角色、共享範圍與共享邀請狀態。</li>
-        <li>照片資料：你拍攝或從相簿選取的品項照片。照片可用來建立待確認品項或補充既有品項圖片。</li>
+        <li>家庭與協作資料：你在 App 內建立或加入的家庭、成員姓名與電子郵件、角色（擁有者／管理者／成員）、共享範圍與共享邀請狀態。若你登入並加入共享家庭，這些資料會提供給同一家庭的其他成員（詳見第 5 節「家庭共享與邀請」）。</li>
+        <li>照片資料：你拍攝或從相簿選取的品項照片。照片可用來建立待確認品項或補充既有品項圖片。若你登入帳號並使用家庭共享，品項照片與你的個人頭貼會同步儲存到雲端；未登入時則僅存於本機／iCloud。</li>
         <li>設定資料：通知時間、外觀設定、教學與引導狀態、旅行模式等偏好設定。</li>
         <li>回饋資料：如果你主動透過 App 內意見回饋寄信，或使用官網回饋表單，內容可能包含回饋類型、姓名或暱稱、電子郵件、主旨、詳細說明、App 版本與 iOS 版本。App 內寄信也可能包含你選擇附上的裝置類型與送出時間。</li>
+        <li>官網使用資料：若你同意網站分析或廣告成效 Cookie，第三方工具可能處理頁面路徑、瀏覽器與裝置資訊、概略位置、來源網站、造訪時間，以及 App Store 外連點擊等網站互動。備理不會將回饋表單欄位、家庭庫存、照片或 iCloud 資料傳送至這些分析或廣告工具。</li>
       </ul>
 
       <h2 id="use">3. 資料用途</h2>
@@ -127,8 +119,11 @@
         <li>計算低庫存、效期、濾芯壽命與清點提醒。</li>
         <li>建立購物清單與採購紀錄。</li>
         <li>使用照片與語音輸入協助快速建檔。</li>
-        <li>透過 iCloud/CloudKit 在你的 Apple 裝置間同步資料。</li>
+        <li>若你未登入帳號，透過 iCloud 在你的 Apple 裝置間同步資料。</li>
+        <li>提供 Apple／Google 帳號登入，並在你選擇登入後透過 Google 提供的雲端服務於你的裝置間同步資料。</li>
+        <li>支援家庭共享功能，讓你邀請的成員共同檢視與管理庫存、空間與採購紀錄。</li>
         <li>在你主動提交回饋時，寄送通知、回覆問題、診斷錯誤及改進產品。</li>
+        <li>在你選擇同意後，分析官網使用情形、衡量 App Store 外連點擊，以及評估 Facebook、Instagram 等廣告活動成效。</li>
       </ul>
 
       <h2 id="permissions">4. 系統權限使用說明</h2>
@@ -138,13 +133,22 @@
         <li>麥克風與語音辨識：用於將語音轉換成品項名稱或輸入文字。</li>
         <li>通知：用於每日庫存摘要、低庫存、效期、濾芯與清點提醒。</li>
         <li>NFC：用於感應你綁定的收納空間標籤，快速打開對應空間。</li>
-        <li>iCloud/CloudKit：用於將你的 App 資料同步到你的個人 iCloud 帳戶。</li>
+        <li>iCloud：用於將你的 App 資料同步到你的個人 iCloud 帳戶。</li>
       </ul>
       <p>你可以在 iOS「設定」中管理上述權限。停用部分權限後，相關功能可能無法使用；其他本機庫存管理功能仍可繼續使用。</p>
 
-      <h2 id="third-parties">5. 資料同步與本機建議</h2>
-      <h3>Apple iCloud / CloudKit</h3>
-      <p>備理使用 Apple CloudKit 將資料同步到你的個人 iCloud 帳戶。這些資料由 Apple 的 iCloud 服務處理，用於支援你的 Apple 裝置間同步。</p>
+      <h2 id="third-parties">5. 第三方服務與資料處理</h2>
+      <h3>Apple iCloud</h3>
+      <p>若你不登入 Apple 或 Google 帳號，備理使用 Apple 的 iCloud 服務將資料同步到你的個人 iCloud 帳戶，用於支援你的 Apple 裝置間同步。</p>
+
+      <h3 id="cloud-sync">Google 雲端服務：帳號登入與資料同步</h3>
+      <p>當你選擇以 Apple 或 Google 帳號登入備理時，我們會透過 Google 提供的雲端服務（技術名稱 Firebase）建立你的帳號，並可能處理以下資料：</p>
+      <ul>
+        <li>你的電子郵件地址與顯示名稱（依你登入時授權的範圍）。</li>
+        <li>一組帳號識別碼。</li>
+        <li>你的庫存、空間、採購、消耗、照片與清點資料（登入後會同步儲存在 Google 的雲端資料庫中，主要伺服器位於亞洲東部地區）。</li>
+      </ul>
+      <p>若你不登入帳號，備理僅在裝置本機（並可能依你的 iCloud 設定）儲存與使用資料，不會建立雲端帳號或將資料傳送到 Google 的雲端服務。你可以隨時在「設定」中登出帳號；登出不會刪除已同步的雲端資料。如需刪除你的雲端帳號及其雲端資料，請依本政策第 12 節聯絡方式提出請求。</p>
 
       <h3>本機商品詞庫</h3>
       <p>App 可能使用隨 App 一起打包的本機商品詞庫來提供輸入建議。本機建議在裝置上完成，用於協助你更快建立品項。</p>
@@ -153,11 +157,28 @@
       <p>當你主動送出 beri-home.app 的回饋表單時，表單內容會透過 Google Apps Script 傳送給備理團隊，並觸發通知信。Google 可能依其服務條款與隱私政策處理傳輸及儲存所需的技術資料。官網不會透過此表單自動讀取你的備理庫存、照片或 iCloud 資料。</p>
       <p>姓名或暱稱、電子郵件、App 版本與 iOS 版本皆由你自行決定是否提供；回饋類型、主旨與詳細說明則是送出表單所需資料。</p>
 
+      <h3 id="household-sharing">家庭共享與邀請</h3>
+      <p>備理支援與其他使用者共同管理一個家庭帳號。當你以帳號登入並加入或建立共享家庭時：</p>
+      <ul>
+        <li>你的姓名、電子郵件與角色（擁有者／管理者／成員）會提供給同一家庭的其他成員檢視。</li>
+        <li>依家庭擁有者的設定，庫存、採購紀錄、店名與價格可能對其他成員可見或隱藏。</li>
+        <li>若你接受「委託採購」邀請並回報購買結果，回報內容（品項、價格、店名、備註）將提供給該家庭的管理者查看。</li>
+      </ul>
+      <p>家庭邀請連結由 Google 的雲端服務與 Cloudflare（一家網路服務公司，網域為 <code>invite.beri-home.app</code>）共同提供服務。Cloudflare 會處理邀請連結的驗證資訊，用來防止邀請連結遭濫用，其服務設計目的不包括存取你的庫存內容；邀請流程仍可能需要傳遞必要的家庭代碼或邀請相關資訊以顯示邀請頁面。</p>
+
+      <h3 id="website-tracking">官網 Cookie、Google Analytics 與 Meta Pixel</h3>
+      <p>官網使用瀏覽器本機儲存空間保存你的 Cookie 選擇。這項必要儲存不會用於廣告，且即使你拒絕網站分析與廣告成效追蹤，網站主要功能仍可使用。</p>
+      <p>只有在你同意「網站分析」後，官網才會載入 Google Tag Manager 與 Google Analytics，用於了解頁面造訪及網站使用情形。Google 可能依其服務條款與隱私政策處理必要的瀏覽器、裝置、網路與互動資料。</p>
+      <p>只有在你同意「廣告成效」後，官網才會載入 Meta Pixel，用於記錄頁面瀏覽與 App Store 外連點擊、衡量 Facebook 與 Instagram 廣告成效，以及建立符合適用規範的網站受眾。Meta 可能設定 <code>_fbp</code>、<code>_fbc</code> 等識別資訊並依其服務條款與隱私政策處理相關資料。Meta Pixel 不會讀取回饋表單內容或 App 內的家庭庫存、照片及 iCloud 資料。</p>
+      <p>你可以在每個頁面的頁尾選擇「Cookie 設定」，隨時調整或撤回網站分析與廣告成效選擇。撤回後，官網會停止後續載入相關工具並嘗試清除可由本網站存取的追蹤 Cookie；第三方已接收資料的處理仍依其政策與適用法律辦理。</p>
+
       <h2 id="local-processing">6. 照片處理</h2>
-      <p>拍照快速建檔會把你選擇的照片存成待確認品項；你可以稍後自行補上品名、容量、價格或其他細節。你確認保存後，相關照片與品項資料會儲存在 App 資料中，並可能依你的 iCloud 設定同步到個人 iCloud。</p>
+      <p>拍照快速建檔會把你選擇的照片存成待確認品項；你可以稍後自行補上品名、容量、價格或其他細節。你確認保存後，相關照片與品項資料會儲存在 App 資料中；若你未登入帳號，可能依你的 iCloud 設定同步到個人 iCloud，若你已登入帳號則會同步到 Google 的雲端服務（見第 5 節）。</p>
 
       <h2 id="retention">7. 資料保存與刪除</h2>
-      <p>你建立的庫存相關資料會保留在裝置本機與你的個人 iCloud 中，直到你在 App 內刪除、刪除 App、清除 iCloud 中的 App 資料，或使用 Apple 提供的 iCloud 管理工具移除資料。備理不另行在開發者伺服器建立一份庫存資料庫。</p>
+      <p>若你未登入帳號：你建立的庫存相關資料會保留在裝置本機與你的個人 iCloud 中，直到你在 App 內刪除、刪除 App、清除 iCloud 中的 App 資料，或使用 Apple 提供的 iCloud 管理工具移除資料。此情況下備理不會在開發者伺服器另外保存一份庫存資料庫。</p>
+      <p>若你已登入帳號：你的庫存、家庭與帳號資料會保存在 Google 的雲端服務中，期間為帳號存續期間；你可依第 12 節聯絡方式申請刪除帳號，我們會在合理期間內從雲端刪除你的資料副本（實際刪除時限以我們回覆你的請求時所告知者為準）。若你退出共享家庭，你的個人帳號資料將自該家庭移除，但你在共享期間產生的庫存／採購紀錄可能依其他家庭成員之需要繼續保留於該家庭帳號中；若整個家庭被擁有者刪除，相關成員資料之處理方式將依當時之家庭刪除功能設計為準，你可來信查詢實際做法。</p>
+      <p>家庭邀請連結相關的驗證資訊（由 Cloudflare 處理）會於邀請到期或撤銷後的合理期間內失效或清除。</p>
       <p>若你透過電子郵件或官網表單主動提供回饋，相關內容可能保存在備理團隊使用的收件信箱與 Google 服務中，用於通知、回覆及追蹤問題，直到不再需要處理該回饋或你提出合理的刪除要求。你可以來信要求刪除先前提供的回饋內容。</p>
 
       <h2 id="choice">8. 你的選擇與控制</h2>
@@ -165,15 +186,18 @@
         <li>你可以在 App 內新增、修改或刪除庫存、空間、採購與清點資料。</li>
         <li>你可以在 iOS 設定中撤回相機、相簿、麥克風、語音辨識、通知或 NFC 相關權限。</li>
         <li>你可以在 iCloud 設定中管理 App 的 iCloud 資料。</li>
-        <li>你可以選擇以手動輸入方式使用備理。</li>
+        <li>你可以選擇以手動輸入方式使用備理，不登入帳號、不建立雲端帳號資料。</li>
+        <li>你可以隨時登出帳號；如需刪除雲端帳號與雲端資料，可依第 12 節聯絡方式提出請求。</li>
+        <li>你可以在家庭設定中管理成員角色、調整店名／價格對其他成員的可見度，或退出共享家庭。</li>
         <li>你可以不填寫官網回饋表單；若已提交，可以來信要求查詢或刪除你提供的回饋資訊。</li>
+        <li>你可以拒絕網站分析與廣告成效 Cookie，或隨時使用頁尾的「Cookie 設定」撤回或修改選擇。</li>
       </ul>
 
       <h2 id="children">9. 兒童隱私</h2>
       <p>備理面向一般家庭使用者。若家長或監護人認為兒童透過回饋信件或官網表單提供了個人資料，可使用本政策下方聯絡方式要求刪除。</p>
 
       <h2 id="security">10. 資料安全</h2>
-      <p>備理採用 iOS 沙盒、SwiftData 與 Apple CloudKit 等平台機制處理資料。請注意，任何本機或雲端同步資料都無法保證絕對安全；建議你保護自己的 Apple ID、裝置密碼與 iCloud 帳戶安全。</p>
+      <p>備理採用 Apple 與 Google 提供的平台安全機制處理資料，並透過存取權限規則限制家庭成員僅能存取其所屬家庭之資料。請注意，任何本機或雲端同步資料都無法保證絕對安全；建議你保護自己的 Apple ID、Google 帳號、裝置密碼與相關帳戶安全。</p>
 
       <h2 id="updates">11. 政策更新</h2>
       <p>本政策可能因 App 功能、第三方服務、Apple 規範或法律要求而更新。更新後的版本會發布在同一個隱私權政策 URL，並標示新的生效日期。</p>
@@ -183,13 +207,16 @@
       <p><a href="mailto:beri.support@gmail.com" style="color: var(--accent); font-weight: 600;">beri.support@gmail.com</a></p>
 
       <h2 id="english-summary">English Summary for App Review</h2>
-      <p>Beri is a household inventory and shopping management app. Inventory, storage space, shopping, purchase, audit, photo, and settings data are primarily stored on the user's device and may sync through the user's private iCloud/CloudKit account.</p>
+      <p>Beri is a household inventory and shopping management app. If a user does not sign in, inventory, storage space, shopping, purchase, audit, photo, and settings data are primarily stored on the user's device and may sync through the user's private iCloud account.</p>
+      <p>If a user signs in with Apple or Google, Beri creates an account through a cloud service provided by Google (technical name: Firebase) and syncs the data above to that cloud service (hosted in the Asia-East region) so the user can access data across devices and share a household with invited members. Sign-in collects the user's email address, display name, and an account identifier.</p>
+      <p>Household sharing: when a user joins or creates a shared household, their name, email, and role (owner/admin/member) become visible to other members of that household. Depending on the household owner's settings, inventory, purchase history, store names, and prices may be visible or hidden to other members. Delegated-purchase reports (item, price, store, note) are shared with the household's admins. Household invite links are served jointly by Google's cloud service and Cloudflare (invite.beri-home.app); Cloudflare processes invite-link verification data to prevent invite-link abuse and is not designed to access inventory content.</p>
       <p>Photo-based quick entry stores the selected item photo as a pending item so the user can fill in the name, package size, price, or other details later. The app may use a bundled local product dictionary for typing suggestions on the device.</p>
       <p>If a user voluntarily submits the website feedback form, the provided feedback and optional contact or diagnostic details are transmitted through Google Apps Script to notify the Beri team. The website form does not access the user's inventory, photos, or iCloud data.</p>
+      <p>The website loads Google Analytics or Meta Pixel only after the user selects the corresponding analytics or advertising consent. Meta Pixel is limited to website page views and App Store outbound clicks; feedback form fields and in-app household data are not sent to these tools.</p>
       <p>For privacy questions or deletion requests, contact <a href="mailto:beri.support@gmail.com">beri.support@gmail.com</a>.</p>
       
       <p style="margin-top: 40px; font-size: 0.9rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 16px;">
-        最後更新時間：2026-07-12
+        最後更新時間：2026-08-30
       </p>
     </div>
   </main>
