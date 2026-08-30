@@ -148,7 +148,7 @@
         <li>An account identifier.</li>
         <li>Your inventory, space, purchase, consumption, photo, and audit data (once signed in, this is synced to Google's cloud database, hosted primarily in the Asia-East region).</li>
       </ul>
-      <p>If you don't sign in, Beri stores and uses data only on your device (and, depending on your settings, your iCloud) — no cloud account is created and no data is sent to Google's cloud service. You can sign out at any time in Settings; signing out does not delete already-synced cloud data. To request deletion of your cloud account and its cloud data, contact us using section 12 of this policy.</p>
+      <p>If you don't sign in, Beri stores and uses data only on your device (and, depending on your settings, your iCloud) — no cloud account is created and no data is sent to Google's cloud service. You can sign out at any time in Settings; signing out does not delete already-synced cloud data. To delete your cloud account and its cloud data, you can self-serve this from the app's "Account &amp; Sync" screen (see section 7).</p>
 
       <h3>Local Product Dictionary</h3>
       <p>The app may use a local product dictionary bundled with the app to provide typing suggestions. These suggestions run entirely on your device and help you create items more quickly.</p>
@@ -175,9 +175,14 @@
       <h2 id="local-processing">6. Photo Processing</h2>
       <p>Photo-based quick entry stores the photo you select as a pending item; you can fill in the name, package size, price, or other details later. Once you confirm and save it, the related photo and item data are stored in the app's data — synced to your personal iCloud based on your settings if you're not signed in, or to Google's cloud service if you are signed in (see section 5).</p>
 
-      <h2 id="retention">7. Data Retention &amp; Deletion</h2>
+      <h2 id="retention">7. Data Retention, Export &amp; Deletion</h2>
       <p>If you're not signed in: the inventory data you create is retained on your device and in your personal iCloud until you delete it in the app, delete the app, clear the app's iCloud data, or use Apple's iCloud management tools to remove it. In this case, Beri does not separately maintain a copy of your inventory database on a developer-operated server.</p>
-      <p>If you're signed in: your inventory, household, and account data are retained in Google's cloud service for the life of your account; you can request account deletion using the contact details in section 12, and we will delete your cloud data copy within a reasonable period (the actual deadline will be communicated when we respond to your request). If you leave a shared household, your personal account data is removed from that household, but inventory/purchase records you contributed while sharing may remain in that household's account for other members' continued use; if an entire household is deleted by its owner, how member data is handled depends on the household-deletion feature's design at that time — contact us to ask about the actual behavior.</p>
+      <p>If you're signed in, you can self-serve both data export and account deletion from the app's "Account &amp; Sync" screen, without emailing support and waiting for a manual response:</p>
+      <ul>
+        <li><strong>Data export:</strong> tapping "Export My Data" generates a ZIP file containing the full data as JSON, a CSV of your purchase history, and your existing item photos. The download link expires after about 15 minutes, and expired export files are automatically cleaned up on a schedule.</li>
+        <li><strong>Account deletion:</strong> tapping "Delete Account" immediately starts a 30-day cancellation period, during which the account is read-only (you cannot add or modify cloud data, or invite or join households). You can cancel anytime in the app during this window, and the account is restored to normal immediately. If you own a shared household, you must first transfer ownership to another member, or explicitly choose to permanently delete it as well — a household chosen for deletion is deleted immediately and cannot be recovered, while a transferred household continues under its new owner and other members. Once the 30-day period ends, the system automatically and permanently deletes your account along with linked profile data, your membership in other households, feedback you've submitted, and any unexpired exports.</li>
+      </ul>
+      <p>If you leave a shared household, your personal account data is removed from that household, but inventory/purchase records you contributed while sharing remain in that household's account for other members to continue using.</p>
       <p>Verification data related to household invite links (processed by Cloudflare) expires or is cleared within a reasonable period after an invite expires or is revoked.</p>
       <p>If you voluntarily provide feedback by email or the website form, that content may be retained in the mailbox and Google services used by the Beri team, for notifications, replies, and issue tracking, until it's no longer needed or you make a reasonable deletion request. You can email us to request deletion of feedback you previously provided.</p>
 
@@ -187,7 +192,7 @@
         <li>You can revoke camera, photo library, microphone, speech recognition, notification, or NFC permissions in iOS Settings.</li>
         <li>You can manage the app's iCloud data in iCloud Settings.</li>
         <li>You can use Beri entirely with manual entry, without signing in or creating any cloud account data.</li>
-        <li>You can sign out at any time; to request deletion of your cloud account and cloud data, contact us using section 12.</li>
+        <li>You can sign out at any time; you can self-serve a data export or request account deletion (cancellable within a 30-day window) from the app's "Account & Sync" screen.</li>
         <li>You can manage member roles, adjust store-name/price visibility to other members, or leave a shared household in Household Settings.</li>
         <li>You can choose not to fill out the website feedback form; if you've already submitted one, you can email us to request access to or deletion of the information you provided.</li>
         <li>You can decline website analytics and advertising-performance cookies, or use the footer's "Cookie Settings" at any time to withdraw or change your choice.</li>
