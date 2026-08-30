@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beri - Support Center &amp; Feedback</title>
+  <meta name="description" content="Beri support center. FAQs and a feedback form. Contact us to report an issue or share a suggestion.">
+  <link rel="canonical" href="https://beri-home.app/en/support.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://beri-home.app/support.html">
+  <link rel="alternate" hreflang="en" href="https://beri-home.app/en/support.html">
+  <link rel="alternate" hreflang="x-default" href="https://beri-home.app/support.html">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://beri-home.app/en/support.html">
+  <meta property="og:title" content="Beri - Support Center & Feedback">
+  <meta property="og:description" content="Beri support center. FAQs and a feedback form. Contact us to report an issue or share a suggestion.">
+  <meta property="og:image" content="https://beri-home.app/appicon.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://beri-home.app/en/support.html">
+  <meta name="twitter:title" content="Beri - Support Center & Feedback">
+  <meta name="twitter:description" content="Beri support center. FAQs and a feedback form. Contact us to report an issue or share a suggestion.">
+  <meta name="twitter:image" content="https://beri-home.app/appicon.png">
+
+  <link rel="icon" type="image/png" href="../appicon.png">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../tracking-config.js"></script>
+  <script src="../tracking-consent.js"></script>
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="nav-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-group">
+        <img src="../appicon.png" alt="Beri Logo" class="logo-img">
+        <span class="logo-text">Beri</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="support.html" class="active">Support</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="../support.html" lang="zh-Hant" hreflang="zh-Hant">中文</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 40px; padding-bottom: 80px;">
+    <!-- Intro Card -->
+    <div class="card" style="text-align: center; padding: 40px 24px;">
+      <h1 style="margin: 0 0 12px; font-size: 2rem;">Beri Support Center</h1>
+      <p style="margin: 0; color: var(--muted); max-width: 600px; margin: 0 auto;">
+        If you run into any issues using the Beri iOS app, or have an idea for a new feature, feel free to share it here. We use the topics and suggestions you provide to guide future improvements.
+      </p>
+    </div>
+
+    <!-- Main Grid: Left FAQ, Right Form -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; margin-top: 24px;">
+
+      <!-- FAQ Section -->
+      <section>
+        <h2 style="margin: 0 0 24px; font-size: 1.4rem; font-weight: 700; border-bottom: 2px solid var(--accent-light); padding-bottom: 8px;">
+          FAQ
+        </h2>
+        <div class="faq-list">
+          <!-- Q1 -->
+          <div class="faq-card">
+            <h3>Q. Do I need to create an account?</h3>
+            <p>Not currently. We stick to an "open and use" principle — no sign-up, login, or account linking required. Download the app and you can start using its local management features right away.</p>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-card">
+            <h3>Q. Where does my data get uploaded to?</h3>
+            <p>Beri is built local-first. Your inventory, spaces, photos, and purchase records are stored primarily on your device; if you turn on iCloud, that data syncs to your personal iCloud via Apple. We don't keep a separate server copy of your inventory unless you sign in with an account (see our <a href="privacy-policy.html">Privacy Policy</a> for details) — and we only receive the contact and issue details you choose to provide when you submit feedback.</p>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-card">
+            <h3>Q. How do I share with my family?</h3>
+            <p>You can choose to "invite someone to co-manage this household," letting family members jointly manage the same home; or use "share just this space" or "ask someone to help shop," which shares a read-only copy of specific content. A read-only copy is best for reference or shopping — later changes aren't guaranteed to sync automatically.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; font-size: 0.9rem; color: var(--muted); text-align: center; border: 1px dashed var(--border); padding: 16px; border-radius: var(--radius);">
+          If the FAQ doesn't answer your question, reach us directly through the form below or by email:<br>
+          <a href="mailto:beri.support@gmail.com" style="color: var(--accent); font-weight: 600;">beri.support@gmail.com</a>
+        </div>
+      </section>
+
+      <!-- Feedback Form Section -->
+      <section>
+        <h2 style="margin: 0 0 24px; font-size: 1.4rem; font-weight: 700; border-bottom: 2px solid var(--accent-light); padding-bottom: 8px;">
+          Feedback &amp; Bug Reports
+        </h2>
+
+        <!-- Success Message Card (Hidden initially) -->
+        <div id="successCard" class="status-card success">
+          <h3>
+            <svg viewBox="0 0 24 24" width="24" height="24" style="display: inline-block; vertical-align: -4px; margin-right: 6px; stroke: currentColor; stroke-width: 2.2; fill: none;">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Submitted successfully!
+          </h3>
+          <p>Thank you so much for your feedback. Our team has received your message, and if we need more details, we'll reach out using the email address you provided.</p>
+          <button onclick="resetForm()" class="btn" style="margin-top: 20px; padding: 8px 20px; font-size: 0.9rem;">Submit another response</button>
+        </div>
+
+        <!-- Feedback Form -->
+        <form id="feedbackForm" class="card" onsubmit="submitFeedback(event)">
+          <p class="form-privacy-note">
+            After you submit, the content is sent to the Beri team via Google Apps Script. Please don't include passwords, payment details, or your household inventory. See our <a href="privacy-policy.html#website-feedback">Privacy Policy</a> for details.
+          </p>
+          <!-- Feedback Type -->
+          <div class="form-group">
+            <label for="feedbackType">Feedback type <span>*</span></label>
+            <select id="feedbackType" class="form-control" required>
+              <option value="問題回報">Bug Report</option>
+              <option value="功能建議" selected>Feature Request</option>
+              <option value="使用疑問">Usage Question</option>
+              <option value="其他">Others</option>
+            </select>
+          </div>
+
+          <!-- Name -->
+          <div class="form-group">
+            <label for="userName">Your name / nickname</label>
+            <input type="text" id="userName" class="form-control" placeholder="e.g. Jane">
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="userEmail">Contact email</label>
+            <input type="email" id="userEmail" class="form-control" placeholder="email@example.com">
+            <p class="form-hint">If you'd like a reply, we recommend filling this in</p>
+          </div>
+
+          <!-- Subject -->
+          <div class="form-group">
+            <label for="formSubject">Subject <span>*</span></label>
+            <input type="text" id="formSubject" class="form-control" placeholder="Briefly describe the issue or idea" required>
+          </div>
+
+          <!-- Description -->
+          <div class="form-group">
+            <label for="formDesc">Details <span>*</span></label>
+            <textarea id="formDesc" class="form-control" placeholder="Please describe the steps you took, what went wrong, or the details of the feature you'd like to suggest" required></textarea>
+          </div>
+
+          <!-- Diagnostic Inputs -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label for="appVersion">Beri app version</label>
+              <input type="text" id="appVersion" class="form-control" placeholder="e.g. 1.0.0">
+            </div>
+            <div class="form-group">
+              <label for="iosVersion">Device OS version</label>
+              <input type="text" id="iosVersion" class="form-control" placeholder="e.g. iOS 18.0">
+            </div>
+          </div>
+
+          <!-- Agreement Checkbox -->
+          <div class="checkbox-group">
+            <input type="checkbox" id="agreePrivacy" required>
+            <label for="agreePrivacy">
+              I confirm the information I've entered <strong>does not include passwords, payment details, or household inventory details</strong>, and I agree to send this form's content to the Beri team to respond to my issue and improve the product. <span>*</span>
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="submitBtn" class="btn" style="width: 100%;">Submit Feedback</button>
+
+          <div id="errorAlert" style="display: none; color: var(--danger); font-size: 0.9rem; font-weight: 600; text-align: center; margin-top: 16px;">
+            Submission failed. Please check your connection, or email us directly at beri.support@gmail.com.
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Beri. All rights reserved.</p>
+      <a href="index.html">Home</a>
+      <a href="story.html">Our Story</a>
+      <a href="support.html">Support</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="https://apps.apple.com/app/id6783732799" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
+    </div>
+  </footer>
+
+  <script>
+    // Once your Google Apps Script Web App is deployed, replace the URL below with your Web App URL
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbwF8XH4aSB9uinskiCodeBHHi4W30INZnGUYrP0vMtaMJpJYq26VwXmVJDaPdSaxRkU/exec';
+
+    function submitFeedback(event) {
+      event.preventDefault();
+
+      const submitBtn = document.getElementById('submitBtn');
+      const errorAlert = document.getElementById('errorAlert');
+      const form = document.getElementById('feedbackForm');
+      const successCard = document.getElementById('successCard');
+
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Sending...';
+      errorAlert.style.display = 'none';
+
+      const payload = {
+        type: document.getElementById('feedbackType').value,
+        name: document.getElementById('userName').value,
+        email: document.getElementById('userEmail').value,
+        subject: document.getElementById('formSubject').value,
+        description: document.getElementById('formDesc').value,
+        appVersion: document.getElementById('appVersion').value,
+        iosVersion: document.getElementById('iosVersion').value
+      };
+
+      // 1. If scriptUrl is unset or still a placeholder, simulate submission (for local testing)
+      if (!scriptUrl || scriptUrl.includes('YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') || scriptUrl.includes('PLACEHOLDER')) {
+        console.log('[Dev mode] Simulated form submission:', payload);
+        setTimeout(() => {
+          form.style.display = 'none';
+          successCard.style.display = 'block';
+          submitBtn.disabled = false;
+          submitBtn.innerText = 'Submit Feedback';
+        }, 1000);
+        return;
+      }
+
+      // 2. Send data to the Google Sheet API
+      fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors', // no-cors avoids the Google Apps Script Web App's redirect restrictions
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(() => {
+        // Response body isn't readable under no-cors, but no thrown error is treated as success
+        form.style.display = 'none';
+        successCard.style.display = 'block';
+      })
+      .catch((error) => {
+        console.error('Form submission error:', error);
+        errorAlert.style.display = 'block';
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Submit Feedback';
+      });
+    }
+
+    function resetForm() {
+      const form = document.getElementById('feedbackForm');
+      const successCard = document.getElementById('successCard');
+
+      form.reset();
+
+      successCard.style.display = 'none';
+      form.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
