@@ -62,29 +62,234 @@
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; margin-top: 24px;">
 
       <!-- FAQ Section -->
-      <section>
+      <section id="faq">
         <h2 style="margin: 0 0 24px; font-size: 1.4rem; font-weight: 700; border-bottom: 2px solid var(--accent-light); padding-bottom: 8px;">
           FAQ
         </h2>
-        <div class="faq-list">
-          <!-- Q1 -->
-          <div class="faq-card">
-            <h3>Q. Do I need to create an account?</h3>
-            <p>Not necessarily. We stick to an "open and use" principle — no sign-up, login, or account linking required. Download the app and you can start using its local management features right away; if you want cross-device sync or to share a household with family, you can sign in with an Apple or Google account to enable that.</p>
-          </div>
-
-          <!-- Q2 -->
-          <div class="faq-card">
-            <h3>Q. Where does my data get uploaded to?</h3>
-            <p>Beri is built local-first. If you don't sign in, your inventory, spaces, photos, and purchase records are stored primarily on your device, and can sync to your personal iCloud based on your iCloud settings; we don't keep a separate server copy of that data. If you choose to sign in with an Apple or Google account, the app instead creates an account and syncs the data above through Google's cloud service (Firebase), for cross-device use and household sharing (see our <a href="privacy-policy.html">Privacy Policy</a> for details). We only receive the contact and issue details you choose to provide when you submit feedback.</p>
-          </div>
-
-          <!-- Q3 -->
-          <div class="faq-card">
-            <h3>Q. How do I share with my family?</h3>
-            <p>You can choose to "invite someone to co-manage this household," letting family members jointly manage the same home; or use "share just this space" or "ask someone to help shop," which shares a read-only copy of specific content. A read-only copy is best for reference or shopping — later changes aren't guaranteed to sync automatically.</p>
-          </div>
+        <!-- BEGIN BERI APP FAQ -->
+        <p>The iOS app guide below is available in Traditional Chinese.</p>
+        <div class="faq-list" lang="zh-Hant">
+          <details class="faq-card">
+            <summary><strong>新增與待確認</strong></summary>
+            <div style="margin-top: 16px;">
+              <h3>待確認品項是什麼？</h3>
+              <p>這是「先記下來、晚點再補資料」的暫存區。拍照快速建檔時，如果品名、數量、單位還不完整，備理會先放進待確認品項；補齊後才會成為正式庫存。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>我要怎麼新增一個備品？</h3>
+              <p>從底部的 + 開始。你可以選擇拍照快速建檔，先建立後再補資料；也可以選擇「建立新品項」，一次填寫容量、價格、分類與空間。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>拍照快速建檔與建立新品項差在哪？</h3>
+              <p>拍照快速建檔適合先把包裝或價格標籤存成一筆待確認紀錄，之後再補齊資料；「建立新品項」適合一開始就填寫容量、價格和使用資訊。</p>
+            </div>
+          </details>
+          <details class="faq-card">
+            <summary><strong>備品與使用紀錄</strong></summary>
+            <div style="margin-top: 16px;">
+              <h3>紅燈、黃燈、綠燈代表什麼？</h3>
+              <p>紅燈代表庫存已用完，或依目前用量估算只剩 2 天內；黃燈代表庫存已到警戒數量，或間斷購買的品項需要留意；綠燈代表目前庫存穩定。每日早報的低庫存提醒會在數量真正低於警戒值時出現，因此剛好等於警戒值會亮黃燈，但不會只因低庫存而通知。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>為什麼備理說快用完了？</h3>
+              <p>累積至少 3 筆有效庫存或使用紀錄後，備理會依目前庫存與消耗速度顯示預估剩餘天數；預估只剩 2 天內時會顯示紅燈。快用完預估通知的天數門檻可在設定中心調整；警戒數量則是另一條低庫存規則。紀錄越完整，預估越貼近實際使用狀況。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>消耗怎麼使用？</h3>
+              <p>消耗是用來記錄「實際用掉多少」。例如衛生紙少一包、洗衣精用掉半瓶，就記一次消耗；備理會用這些紀錄學習使用速度。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>怎麼完整記錄一次消耗？</h3>
+              <p>到實際使用地點記錄剩餘量最完整。先進空間頁，選浴室、主臥浴室等使用地點，再把品項調成現在看到的數量；如果數量變少，備理會自動記下原本數量、目前數量、消耗量、經過天數，並更新總庫存與此空間的消耗速度。若只是從倉庫補到浴室，那是調度，不算消耗；等浴室庫存實際變少時，再用清點或消耗記錄。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>使用紀錄可以修改、取消或撤銷嗎？</h3>
+              <p>進行中的使用批次可以修改開始日期、使用空間、開始數量、剩餘數量、是否納入估算與備註。尚未產生消耗紀錄時，可以直接取消開始使用；已產生消耗紀錄後，則可停止後續追蹤，但會保留歷史紀錄。若誤按「已用完」，可以使用撤銷功能恢復庫存。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>「開始使用」和「開始試試」有什麼差別？</h3>
+              <p>「開始使用」適合已經確定會使用的品項，備理會記錄開始日期、使用空間與剩餘數量，並納入消耗速度與剩餘天數估算。「開始試試」適合體驗新品牌或新款式，會保留使用紀錄，但預設不納入主要消耗估算。兩者都可以在品項詳細頁或空間品項頁開始。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>持續購買、間斷購買和不再購買有什麼差別？</h3>
+              <p>持續購買適合固定會補貨的品項，會依庫存與預估天數提醒；間斷購買適合偶爾才需要的品項，原本的緊急紅燈會改成黃燈，也不會送出補貨型每日早報；不再購買會停止補貨提醒，庫存用完後可封存，但歷史紀錄仍會保留。</p>
+            </div>
+          </details>
+          <details class="faq-card">
+            <summary><strong>採購與購物清單</strong></summary>
+            <div style="margin-top: 16px;">
+              <h3>我要怎麼把快用完的東西加入購物清單？</h3>
+              <p>在品項詳細頁按「標記補貨」即可加入購物清單；也可前往「任務 → 購物」，將「備理補貨提醒」向左滑加入，或搜尋已建檔品項後加入。加入後點預計數量即可修改要買多少。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>採購怎麼使用？</h3>
+              <p>到「任務 → 購物 → 購物清單」查看要買的品項，可用品項分類篩選。買到後勾選品項，確認實際數量、總金額、通路、日期及存放空間；備理會把採購紀錄和庫存加回原品項，並完成這筆清單。可在「購入記錄」查看已購入的項目。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>買回來之後要按哪裡？</h3>
+              <p>在購物清單勾選已建檔品項，再確認或修改實際購買數量、總金額、通路與日期。可選擇「存放空間」，預設為「待整理」。確認後會在原品項建立採購紀錄，並將實際數量入庫；即使少買，清單仍整筆完成。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>購物清單和家裡庫存有什麼關係？</h3>
+              <p>購物清單的數量是預計要買多少，可以隨時修改；購入確認的數量是實際買到多少，會成為採購紀錄並加入庫存。例如預計買 3 個、實際買 2 個，採購與庫存都記 2 個，清單整筆完成。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>如何使用比價？</h3>
+              <p>先替品項補齊包裝層級與換算，例如「1 箱 = 12 瓶」或「1 包 = 100 抽」。在「任務 → 購物」搜尋既有品項時，可以查看同類商品的歷史價格；也可以在品項詳細頁選擇「比較同類商品」。備理會用共同的最小單位換算單價。找不到既有品項時，也可以自行輸入品名、通路、價格與容量比價。</p>
+            </div>
+          </details>
+          <details class="faq-card">
+            <summary><strong>空間與清點</strong></summary>
+            <div style="margin-top: 16px;">
+              <h3>我要怎麼整理不同房間或櫃子的東西？</h3>
+              <p>到空間頁新增房間、櫃子或隨身包，再把品項分配到對應空間。這樣清點時就能直接照實際位置整理。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>什麼是清點？為什麼要清點？</h3>
+              <p>清點是把實際看到的數量修正回備理。它不是重新建檔，而是校正庫存；清點越穩定，消耗速度和補貨提醒越準。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>調度、消耗和送人有什麼差別？</h3>
+              <p>調度是把庫存從一個空間移到另一個空間，總庫存不變，也不會算成消耗。送人不算消耗：它會減少總庫存，但不納入使用速度估算。只有實際用掉或清點發現數量變少，才算消耗。若該品項正在使用，調度時備理也會把對應的使用批次移到新空間。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>如何使用 NFC 空間標籤？</h3>
+              <p>先到「收納」頁，開啟要設定的空間並進入編輯，選擇「綁定 NFC 標籤」，再將 iPhone 靠近 NFC 標籤完成綁定。之後在收納頁掃描這張標籤，備理就會直接開啟對應的空間。若標籤更換或失效，可以在空間編輯頁重新綁定。若標籤貼在鐵櫃、金屬罐或家電等金屬表面，要使用抗金屬 NFC 標籤。</p>
+            </div>
+          </details>
+          <details class="faq-card">
+            <summary><strong>濾芯、效期與用電裝置</strong></summary>
+            <div style="margin-top: 16px;">
+              <h3>如何用備理管理需要換電池的裝置？</h3>
+              <p>建立電池品項時，可以選填電子鎖、遙控器、玩具或滑鼠等用電裝置；也能之後在電池品項詳細頁新增、修改或刪除。請設定每次使用顆數，日後按「記錄更換」並選擇來源空間，備理就會扣除對應的備用電池庫存。刪除裝置只會把它從清單隱藏，既有更換與消耗歷史仍會保留。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>為什麼用電裝置還沒有預估電量？</h3>
+              <p>第一次填寫開始使用日只會建立追蹤起點，不會扣除備用庫存。累積兩次實際更換日期後，備理才能用更換間隔推估電量與下次更換日；更多紀錄會參考最近幾次週期。這是時間推估，不是讀取裝置的真實電壓。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>濾芯更換和有效期限要怎麼設定？</h3>
+              <p>濾芯／濾網可以設定更換週期，並替每個使用空間記錄開始日期。有效期限在每次採購紀錄中填寫，因為不同批次可能有不同效期。這些日期都可選填。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>家庭用量和使用對象會影響什麼？</h3>
+              <p>先在「設定中心 → 家庭成員與用量」設定成人與幼兒，再於品項中選擇實際使用對象。這些資料可用來辨識品項，並在採購與月支出中依成員篩選；沒有指定時會視為全家共用。目前人數與權重不會自動改變剩餘天數估算，也與共享住所的成員權限無關。</p>
+            </div>
+          </details>
+          <details class="faq-card">
+            <summary><strong>提醒與自動化</strong></summary>
+            <div style="margin-top: 16px;">
+              <h3>每日早報會提醒哪些事情？</h3>
+              <p>每日早報會整理低庫存、接近更換日的濾芯／用電裝置，以及 30 天內到期的品項。快用完預估會另行通知，並依你為各品項選擇的合併或依空間方式估算；提醒天數可在設定中心調整。低庫存需真正低於警戒數量才會通知；暫時忽略補貨提醒後，該品項 7 天內不會收到補貨型通知。請先允許系統通知，也可在設定中心調整每日早報時間。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>旅遊模式會暫停哪些提醒與估算？</h3>
+              <p>旅遊模式會凍結家中空間的消耗估算，並暫停這些家中庫存的通知；隨身包等隨身空間仍會繼續計算與提醒。你可以手動開關，也可以設定開始與結束日期，期限到了會自動關閉。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>清點提醒會怎麼推薦要清點的品項？</h3>
+              <p>你可以決定是否推薦快過期、快用完、低庫存或太久沒清點的品項，並調整天數門檻與每次最多顯示幾項。這些設定只改變清點建議，不會直接修改庫存。</p>
+            </div>
+          </details>
+          <details class="faq-card">
+            <summary><strong>為什麼要使用這些功能？</strong></summary>
+            <div style="margin-top: 16px;">
+              <h3>清點有什麼好處？</h3>
+              <p>清點會把備理裡的數量修正成實際看到的數量。這能讓快用完提醒、剩餘天數、補貨建議更準，也比較不會漏買或重複買。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>記消耗有什麼好處？</h3>
+              <p>記消耗可以讓備理學習家裡的使用速度。累積幾次後，備理就能推估還能用幾天，也能更早提醒你補貨。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>記採購紀錄有什麼好處？</h3>
+              <p>採購紀錄會留下價格、通路、購買時間和補貨數量。之後你可以比較哪裡比較划算，也能回頭看多久需要買一次。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>設定包裝單位有什麼好處？</h3>
+              <p>包裝單位能讓包、瓶、抽、片互相換算。設定後，清點時可以用你習慣的單位，備理仍能正確計算庫存、消耗和比價。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>把東西分到空間有什麼好處？</h3>
+              <p>分到空間後，你會知道東西實際放在哪裡，也能只清點某個房間、櫃子或隨身包，不用每次整理全家的庫存。</p>
+            </div>
+          </details>
+          <details class="faq-card">
+            <summary><strong>單位、預測與整理</strong></summary>
+            <div style="margin-top: 16px;">
+              <h3>包、瓶、抽、片要怎麼設定？</h3>
+              <p>先用你最常清點的單位記錄，例如包或瓶；再補上包裝換算，例如 1 包有 100 抽。備理會用這些換算消耗、庫存和比價。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>我輸入錯數量或單位怎麼改？</h3>
+              <p>進入品項明細可以調整完整資料；如果是某個空間數量不對，到空間清點時修正實際數量即可。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>為什麼剩餘天數不準？</h3>
+              <p>通常是因為剛開始資料還少、包裝換算不完整，或最近用量變化很大。補上消耗紀錄與清點紀錄後，預測會逐步修正。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>停產或不再買的東西要怎麼處理？</h3>
+              <p>如果只是暫時沒庫存，可以加入購物清單；如果已經用完而且不再買，應該封存，避免之後又被補貨提醒打擾。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>同一商品有不同包裝結構時，該如何記錄？</h3>
+              <p>先依各自的包裝規格建檔，再從品項詳細頁右上角「⋯」選擇「加入品項群組」。選好另一個品項後，先確認共同單位、合計庫存及名稱，再確認合併。備品頁會顯示一張群組卡片，可從「管理品項群組」查看原規格或切換分離檢視。原有庫存、採購和使用紀錄會保留。在共享住所，共同管理者可提出建議，只有擁有者可以確認合併、分離或在 72 小時內撤銷。</p>
+            </div>
+          </details>
+          <details class="faq-card">
+            <summary><strong>住所、共享與帳號</strong></summary>
+            <div style="margin-top: 16px;">
+              <h3>什麼是「住所」？為什麼可以建立多個？</h3>
+              <p>住所是一組獨立管理的家庭資料，包含備品、收納空間、採購與使用紀錄。你可以為自己家、父母家、租屋處或工作室分別建立住所；不同住所的資料不會混在一起，也不用填寫真實地址。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>如何建立新的住所？</h3>
+              <p>在收納、備品或任務頁點選上方目前的住所名稱，再選擇「新增住所」；也可以前往「設定中心 → 住所與空間管理」，點右上角的「＋」。輸入住所名稱並選擇圖示後即可建立。建立完成時會自動切換到新住所，並詢問是否接著建立第一個收納空間。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>切換住所時，資料會被搬走或混在一起嗎？</h3>
+              <p>不會。切換住所只是改變目前正在查看與管理的資料範圍，不會搬移、複製或刪除任何內容。每個住所的備品、空間、採購與使用紀錄會分開保存；需要搬動品項時，請另外使用品項移轉功能。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>如何與家人共享住所？</h3>
+              <p>可以透過「設定中心 → 共享成員與權限」邀請家人加入住所。核准時可決定對方能查看全部或指定空間，以及能管理或僅查看。成員加入後會持續同步有權限的資料，住所擁有者可以在同一頁查看及調整權限。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>如何邀請家人或夥伴一起管理住所？</h3>
+              <p>前往「設定中心 → 共享成員與權限」，確認目前住所後點「邀請成員」並分享連結。對方開啟連結、以 Apple 或 Google 登入後會送出加入申請。原邀請者在「待核准的加入申請」逐人核准，並設定全部或指定空間，以及「可管理」或「僅查看」。核准後對方才會加入住所。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>共享管理出現重複成員或人數不符時怎麼處理？</h3>
+              <p>同一 Beri 帳號在 Android 與 iOS 登入只算一位。若舊版 CloudKit 成員與已上線雲端的 Firebase 成員重複，請在重複列確認「發送專屬邀請」所列角色，將連結交給該位本人，並由本人在出現重複的裝置上使用原本已加入住所的 Apple／Google 帳號開啟及接受。App 會依邀請攜帶的舊成員紀錄 ID 配對，不會按姓名猜測，也不會變更既有雲端權限。若無法確認該列屬於誰，或沒有管理邀請的權限，請勿轉傳或接受該連結，改請住所擁有者協助；其他裝置若仍顯示重複，需在該裝置完成同樣配對。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>共享成員加入後，不同角色可以做什麼？</h3>
+              <p>住所擁有者可以管理住所、成員與共享設定。獲得「可管理」權限的成員可以在授權空間新增與編輯備品及空間；「僅查看」成員只能查看獲授權的內容。每日早報適用於住所擁有者與成員，依各裝置的系統通知權限與已同步資料排程。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>如何停止共享、移除成員或離開住所？</h3>
+              <p>在「設定中心 → 共享成員與權限」，有成員管理權限的人可管理或移除成員；邀請者可撤銷自己發出的邀請。受邀成員可從同一頁選擇「離開此共享住所」。離開後只會失去對該共享住所的存取，自己的帳號與其他住所不受影響。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>刪除帳號前，住所要怎麼處理？</h3>
+              <p>刪除帳號前，住所擁有者可以選擇將住所擁有權移轉給其他成員，或選擇刪除住所。帳號刪除申請會先進入 30 天復原期，期間可以重新登入取消；期限過後，帳號與個人雲端資料會永久刪除。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>分類管理和品項類型有什麼關係？</h3>
+              <p>分類用來整理與篩選品項，也可以帶入預設品項類型；品項類型會決定部分專屬欄位，例如濾芯的更換追蹤或電池的用電裝置。有效期限在各次採購紀錄中選填，不受品項類型限制。你可以在分類管理新增、修改或刪除分類，單一品項仍可另外指定類型。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>資料會不會不見？有沒有同步？</h3>
+              <p>未登入時，資料只保存在這台裝置；使用 Apple 或 Google 登入後，會透過 Firebase 同步住所資料並支援家庭協作。你也可以在登入與資料同步匯出雲端資料或管理帳號刪除。</p>
+            </div>
+            <div style="margin-top: 16px;">
+              <h3>我想重新看教學，要去哪裡？</h3>
+              <p>到設定中心的幫助與教學，或直接進入重新查看引導。你可以一次重播全部流程，也可以只重播某一個情境。</p>
+            </div>
+          </details>
         </div>
+        <!-- END BERI APP FAQ -->
 
         <div style="margin-top: 24px; font-size: 0.9rem; color: var(--muted); text-align: center; border: 1px dashed var(--border); padding: 16px; border-radius: var(--radius);">
           If the FAQ doesn't answer your question, reach us directly through the form below or by email:<br>
